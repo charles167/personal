@@ -1,6 +1,5 @@
-
-document.getElementById("emailForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent actual form submission
+function openGmail(event) {
+    event.preventDefault(); // Prevent form from submitting
 
     // Get form values
     const name = document.getElementById("name").value;
@@ -13,4 +12,8 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
 
     // Open Gmail in a new tab
     window.open(mailtoLink, "_blank");
-});
+
+    // Hide the form and show the thank-you message
+    document.getElementById("gForm").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+}
